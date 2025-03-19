@@ -1,0 +1,161 @@
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    font-family: Arial, sans-serif;
+    background: linear-gradient(to right, #009688, #00bcd4); 
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+}
+
+.container {
+    background-color: #fff;
+    padding: 30px;
+    border-radius: 10px;
+    box-shadow: 0 4px 20px rgba(0, 0, 0, 0.2);
+    width: 350px;
+    text-align: center; 
+}
+
+.form-container h2 {
+    margin-bottom: 20px;
+    color: #333; 
+}
+
+.back-button {
+    position: absolute;
+    top: 20px;
+    left: 20px;
+    background-color: #007bff;
+    color: white;
+    padding: 8px 12px;
+    border-radius: 4px;
+    text-decoration: none;
+    font-size: 14px;
+    transition: background-color 0.3s;
+}
+
+.back-button:hover {
+    background-color: #0056b3;
+}
+
+.login-form h2 {
+    margin-bottom: 20px;
+    text-align: center; 
+    display: flex; 
+    align-items: center; 
+    justify-content: center; 
+}
+
+.login-form h2 i {
+    margin-right: 8px; 
+    font-size: 24px; 
+    color: #007bff; 
+}
+
+.input-group {
+    margin-bottom: 15px;
+}
+
+.input-group label {
+    display: block;
+    margin-bottom: 5px;
+    color: #555; 
+}
+
+.input-group input {
+    width: 100%;
+    padding: 10px;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    transition: border-color 0.3s; 
+}
+
+.input-group input::placeholder {
+    color: #aaa; 
+    opacity: 1; 
+}
+
+.input-group input:focus {
+    border-color: #007bff; 
+    outline: none; 
+}
+
+button {
+    width: 100%;
+    padding: 10px;
+    background-color: #007bff;
+    color: white;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+    font-size: 16px;
+    transition: background-color 0.3s; 
+}
+
+button:hover {
+    background-color: #0056b3; 
+}
+
+.message {
+    text-align: center;
+    margin-top: 15px;
+}
+
+.message a {
+    color: #007bff;
+    text-decoration: none;
+}
+
+.message a:hover {
+    text-decoration: underline;
+}
+
+.social-icons {
+    position: absolute;
+    top: 20px;
+    right: 20px;
+}
+
+.social-icons a {
+    display: inline-flex; 
+    justify-content: center;
+    align-items: center;
+    width: 40px; 
+    height: 40px; 
+    border-radius: 50%; 
+    background-color: rgba(255, 255, 255, 0.8); 
+    color: #333; 
+    text-decoration: none;
+    margin: 0 10px; 
+    transition: background-color 0.3s, transform 0.3s; 
+}
+
+.social-icons a:hover {
+    background-color: #007bff; 
+    transform: scale(1.1); 
+    color: white; 
+}
+
+.social-icons i {
+    font-size: 20px; 
+}
+/* Responsif untuk ukuran layar kecil */
+@media (max-width: 400px) {
+    .social-icons a {
+        font-size: 20px; 
+        margin: 0 5px; 
+    }
+}
+
+.copyright {
+    text-align: center;
+    margin-top: 20px;
+    font-size: 16px; 
+    color: #666; 
+}
