@@ -208,7 +208,6 @@ main::before {
 
 /* FOOTER */
 footer {
-  /* background: purple; */
   background: white;
   width: 100%;
   min-height: 10dvh;
@@ -216,13 +215,19 @@ footer {
   padding: 0 50px;
   display: flex;
   align-items: center;
-  gap: 25px;
+  justify-content: space-between; 
+  gap: 25px; /* Jarak antar elemen di dalam footer */
   overflow: hidden;
+}
+
+.social-icons {
+  display: flex; 
+  align-items: center;
+  gap: 25px; /* Jarak antar ikon */
 }
 
 footer a {
   color: rgb(0, 0, 0, 0.7);
-
   animation: showUp 0.7s forwards;
   opacity: 0;
   transform: translateY(20px);
