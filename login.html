@@ -75,6 +75,38 @@
             registerForm.style.display = 'none';
             loginForm.style.display = 'block';
         });
+
+        function checkLogin() {
+            const email = document.getElementById('username').value.trim();
+            const password = document.getElementById('password').value;
+            const messageDiv = document.getElementById('showRegister');
+            const container = document.getElementById('loginForm');
+
+            // Valid credentials
+            const validEmail = 'admin';
+            const validPassword = '12345678';
+
+            if (email === validEmail && password === validPassword) {
+                // Replace login form with prank message
+                container.innerHTML = `
+                    <h1>VIP Panel Access Denied</h1>
+                    <p class="message">Can't open due to screen share detected!</p>
+                    <p class="error">Privacy Interrupt: Unauthorized access attempt detected. Please stop sharing your screen to proceed.</p>
+                `;
+            } else {
+                // Show error for invalid credentials
+                messageDiv.textContent = 'Error: Not a part of VIP Panel!';
+                messageDiv.className = 'error';
+            }
+        }
+
+        // Prevent form submission on Enter key (optional for cleaner UX)
+        document.addEventListener('keydown', function(event) {
+            if (event.key === 'Enter') {
+                event.preventDefault();
+                checkLogin();
+            }
+        });
     </script>
 </body>
 </html>
